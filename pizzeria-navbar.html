@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/pizza_2.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/832b6972f7.js" crossorigin="anonymous"></script>
+    <title>Página de inicio de Pizzeria</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="col-full">
+            <div class="logo">
+                <a class="logo_text" href="#">
+                    <img src="img/logo.png" alt="NeosPizza">
+                </a>
+            </div>
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="" class="menu_link">Ordene</a>
+                </li>
+                <li class="menu_item">
+                    <a href="" class="menu_link">Sucursales</a>
+                </li>
+                <li class="menu_item">
+                    <a href="" class="menu_link">Sobre nosotros</a>
+                </li>
+                <li class="menu_item">
+                    <a href="" class="menu_link">Contacto</a>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <span class="phone_order">Pedidos al número</span>
+                <span class="phone_number">888 999 4232</span>
+            </div>
+
+            <div class="login">
+                <a class="login_link login_link--button" href="#">Login</a>
+                <a class="login_link" href="#">Signup</a>
+            </div>
+
+            <div class="btn_pizza">
+                <i class="fas fa-pizza-slice"></i>
+            </div>
+
+            <div class="btn_login">
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="btn_menu">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pizza-fast">
+        <div class="col-full">
+            <ul class="pizza_list">
+                <li class="pizza_item">
+                    <i class="fas fa-pizza-slice"></i>
+                    <a class="pizza_link" href="#">Porción</a>
+                </li>
+                <li class="pizza_item">
+                    <!-- <img src="pizza_2.svg" alt="" width=""> -->
+                    <img src="img/pizza_2.svg" alt="" width="32">
+                    <a class="pizza_link" href="#">Pizza</a>
+                </li>
+                <li class="pizza_item">
+                    <i><img src="img/pizza_3.svg" alt="" width="32"></i>
+                    <a class="pizza_link" href="#">Familiar</a>
+                </li>
+                <li class="pizza_item">
+                    <i><img src="img/pizza_5.svg" alt="" width="32"></i>
+                    <a class="pizza_link" href="#">Frituras</a>
+                </li>
+                <li class="pizza_item">
+                    <i><img src="img/pizza_6.svg" alt="" width="40"></i>
+                    <a class="pizza_link" href="#">Combos</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!-- Seccion slider -->
+    <section class="slider">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="img/pizza-wallpaper.jpg">
+                <div class="slide-text">Producto N° 1</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/pizza-wallpaper-2.jpg">
+                <div class="slide-text">Producto N° 2</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/pizza-wallpaper-3.jpg">
+                <div class="slide-text">Producto N° 3</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/pizza-wallpaper-4.jpg">
+                <div class="slide-text">Producto N° 3</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/pizza-wallpaper-5.jpg">
+                <div class="slide-text">Producto N° 3</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/pizza-wallpaper-6.jpg">
+                <div class="slide-text">Producto N° 3</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/lines -->
+        <div style="text-align:center;position: relative;bottom: 50px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </section>
+
+    <section class="foodset">
+        <a href="#" class="food_item food_item--bigger">
+            <span class="foodset_title">Combo personal</span>
+            <span class="foodset_desc">Gaseosa 400 Ml + papas</span>
+        </a>
+        <a href="#" class="food_item">
+            <span class="foodset_title">Mini combo</span>
+            <span class="foodset_desc">2 Gaseosas mini</span>
+        </a>
+        <a href="#" class="food_item">
+            <span class="foodset_title">Pizza </span>
+            <span class="foodset_desc">Vaso de cerveza</span>
+        </a>
+        <a href="#" class="food_item food_item--longer">
+            <span class="foodset_title">Ordene online</span>
+        </a>
+    </section>
+
+    <section class="tabpane-product">
+        <div class="col-full col-full--tabpane">
+            <ul class="tablist">
+                <li class="tabitem tabitem--active" id="lab1">
+                    <a href="#tab1" class="tabitem_link">Bebidas</a>
+                    <!-- Reemplazar el pseudoelemento por un div aqui -->
+                    <!-- leer esto https://www.jasoft.org/Blog/post/javascript-como-acceder-y-modificar-pseudo-elementos-como-after-y-before -->
+                </li>
+                <li class="tabitem" id="lab2">
+                    <a href="#tab2" class="tabitem_link">Pizzas</a>
+                </li>
+                <li class="tabitem" id="lab3">
+                    <a href="#tab3" class="tabitem_link">Burguers</a>
+                </li>
+            </ul>
+
+            <div class="tabcontent tabcontent--active" id="tab1">
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/malteada-chocolate.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Malteada Strawberry</span>
+                            <span class="card__desc">Deliciosa malteada de fresa con cubrimientos de chocolate y
+                                cerezas.</span>
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/pure-coffe-cup.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Cafe puro</span>
+                            <span class="card__desc">Cafe puro con grano fresco seleccionado</span>
+                        </div>
+
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="" class="card__link">
+
+                        <img src="/img/beer.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Cerveza</span>
+                            <span class="card__desc">Fresco vaso de cerveza de alta calidad edición especial</span>
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="tabcontent" id="tab2">
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/pizza-hawaiana.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Hawaiana</span>
+                            <span class="card__desc">Pizza hawaiana con el sabroso sabor agridulce de la piña, queso derretido y fragmentos de jamón.</span>
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/pizza-mexicana.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Mexicana</span>
+                            <span class="card__desc">Sabrosa pizza con todo el sabor del picante mexicano, nachos, carne y ricas salsas.</span>
+                        </div>
+
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/pizza-pepperoni.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Pepperoni</span>
+                            <span class="card__desc">Nuestra especialidad para deleite y deguste.</span>
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="tabcontent" id="tab3">
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/hamburguer-cerdo.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Cerdo y vegetales</span>
+                            <span class="card__desc">Hamburguesa con vegetales, tomate, carne de cerdo y queso parmesano derretido.</span>
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/chili-burger-big.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Chilli Burguer</span>
+                            <span class="card__desc">Hamburguesa con carne y salsas picantes.</span>
+                        </div>
+
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="" class="card__link">
+                        <img src="/img/big-burguer.png" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Big Burguer</span>
+                            <span class="card__desc">Hamburguesa grande de dos pisos con rodajas de fresco dulce </span>
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pizza_day">
+        <!-- <img src="pizza-day-wallpaper.jpg" alt="Bruno Marques Designer en Pixabay"> -->
+        <div class="pizza_day-text">
+            <span class="pizza_text-free">Envio gratis con</span>
+            <span class="pizza_text-day">Pizza del día</span>
+            <div class="pizza_day_number">
+                <div class="pizza_price">$30.000 <span>c/u</span></div>
+                <div class="pizza_option">
+                    <span>Pizza hawaiana</span>
+                    <span>Pizza champiñones</span>
+                    <span>Pizza lasagna</span>
+                </div>
+            </div>
+            <a href="#" class="btn_order">Ordene Ahora</a>
+        </div>
+    </section>
+
+    <section class="product-sample">
+        <div class="col-full col-full--tabpane">
+            <span class="product-sample-title" id="lab3">Nuestros productos</span>
+
+
+            <div class="samples-content">
+                <div class="card card-width">
+                    <a href="" class="card__link link-modifier">
+                        <img src="/img/big-burguer.png" class="card_img" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Big burger</span>
+
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card card-width">
+                    <a href="" class="card__link link-modifier">
+                        <img src="/img/hamburguer-cerdo.png" class="card_img" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Hamburguesa de Carne Cerdo</span>
+
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card card-width">
+                    <a href="" class="card__link link-modifier">
+                        <img src="/img/malteada-chocolate.png" class="card_img" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Malteada Cremosa de Chocolate</span>
+
+                        </div>
+
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card card-width">
+                    <a href="" class="card__link link-modifier">
+                        <img src="/img/pizza-mexicana.png" class="card_img" alt="" height="250px">
+                        <div class="card__text">
+                            <span class="card__title">Pizza Mexicana</span>
+
+                        </div>
+                        <div class="card__button">
+                            <div class="card_icon"></div>
+                            <p class="card__button-text">Seleccionar Opción</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="speciallity">
+        <div class="speciallity__text">
+            <span class="speciallity__title">Pizza del día</span>
+            <div class="speciallity__desc">Deliciosa pizza de champiñones con un magnifico descuento. Puede pedirla con un combo de bebidas para llevar, Hoy el envió es gratis. Pidala ya!.
+
+            </div>
+            <a href="" class="speciallity__link">
+                <div class="card__button card__button--visible">
+                    <div class="card_icon"></div>
+                    <p class="card__button-text card__button-text--speciallity">Seleccionar Opción</p>
+                </div>
+            </a>
+        </div>
+        <div class="speciallity__img">
+            <img src="img/pizza-especial-big.png" alt="">
+        </div>
+    </section>
+
+    <section class="qualities">
+        <div class="qualities-item">
+            <i class="fas fa-shipping-fast"></i>
+            <span class="qualities__title">
+                Entregas rápidas
+            </span>
+            <div class="speciallity__desc">
+                Pedidos y envios rápidos desde nuestras sucursales
+            </div>
+        </div>
+        <div class="qualities-item">
+            <i class="fas fa-user-tie"></i>
+            <span class="qualities__title">
+                Cocina profesional
+            </span>
+            <div class="speciallity__desc">
+                Productos preparados por el personal más capacitado en culinaria
+            </div>
+        </div>
+        <div class="qualities-item">
+            <i class="fas fa-seedling"></i>
+            <span class="qualities__title">
+                Salubridad
+            </span>
+            <div class="speciallity__desc">
+                Nuestros procedimientos son saludables, seguimos estrictamente un regimen de salubridad en nuestros establecimientos y el manejo de nuestos alimentos.
+            </div>
+        </div>
+        <div class="qualities-item">
+            <i class="fas fa-id-card-alt"></i>
+            <span class="qualities__title">
+                Trabaje con nosotros
+            </span>
+            <div class="speciallity__desc">
+                Si estas interesado en trabajar en nuestra empresa contáctanos.
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" class="social-item"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-item"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" class="social-item"><i class="fab fa-instagram-square"></i></a>
+            <a href="#" class="social-item"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="logo logo-footer">
+            <a class="logo_text" href="#">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="data">
+            <span class="data_item">NeosPizza Restaurant</span>
+            <span class="data_item">Dirección del restaurante</span>
+            <span class="data_item">Telefono: 888 999 4232</span>
+        </div>
+
+        <span class="copyright">
+            © 2021 Sagitarius Design |
+            Todos los derechos reservados.
+        </span>
+    </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

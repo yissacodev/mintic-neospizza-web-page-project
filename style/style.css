@@ -1,0 +1,934 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
+/*Insertar fuentes locales si no hay conexión*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+    font-family: "ThirstyScript";
+    src: url("../font/ThirstyScriptExtraBoldDemo.otf");
+}
+
+@font-face {
+    font-family: "Yanone Kaffeesatz";
+    src: url("../font/YanoneKaffeesatz-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-width: 440px;
+}
+
+body {
+    background-color: #faf6f2;
+    min-height: 400px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    min-width: 440px;
+
+}
+
+/* Inicio de estilos de la Barra de navegación*/
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+
+    font-family: "Open Sans", sans-serif;
+    border-bottom: 1px solid #ede5e552;
+    background-color: #c00a27;
+    padding-top: 20px;
+}
+
+.col-full {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1200px;
+    min-width: 400px;
+}
+
+/*Logo*/
+.logo_text {
+    color: #e6e6e6;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+/*Menú principal*/
+.menu {
+    display: flex;
+}
+
+.menu_item {
+    padding: 15px 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.menu_link {
+    color: #e6e6e6;
+    font-weight: bold;
+}
+.menu_link::after {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 42px;
+    margin: 0 auto;
+    margin-top: 6px;
+    background-color: #ffae00;
+    visibility: hidden;
+}
+.menu_link:hover::after {
+    visibility: visible;
+}
+
+.menu_link:hover {
+    margin-top: -6px;
+    color: #ccc8c8;
+}
+
+/*Telefono de domicilios*/
+.phone {
+    text-align: right;
+}
+.phone_order {
+    color: #ffae00;
+}
+.phone_number {
+    display: block;
+    color: #e6e6e6;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.6em;
+}
+
+/*Seccion de login*/
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_link {
+    color: #e6e6e6;
+    padding: 0.6em 1.5em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.login_link--button {
+    padding: 10px 20px;
+    background-color: #8ca93e;
+    border-radius: 16px;
+}
+
+.btn_menu,
+.btn_login,
+.btn_pizza {
+    display: none;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu--show {
+    top: 120px !important;
+}
+.pizza_list--show {
+    top: 120px !important;
+}
+.login--show {
+    top: 120px !important;
+}
+
+/*Fin de la barra de navegación*/
+/*----------------------------------------------------------------------------*/
+/* Seccion de pizzas ofrecidas*/
+/* .pizza_products {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #c00a27;
+} */
+
+.pizza-fast {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #c00a27;
+}
+
+.pizza_list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #c00a27;
+}
+
+.pizza_item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    height: 100%;
+    padding: 0 15px;
+    color: #e6e6e6;
+    opacity: 0.8;
+}
+
+.pizza_item i {
+    font-size: 2em;
+}
+
+.pizza_item:hover {
+    opacity: initial;
+}
+
+.pizza_link {
+    color: #e6e6e6;
+    text-align: center;
+}
+/*----------------------------------------------------------------------------------*/
+/*Seccion Slider*/
+/*Contenedor del Slider */
+.slideshow-container {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -3%;
+    padding: 1vw 2vw;
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.slide-text {
+    color: #ffffff;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: calc(2em + 4vw);
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    text-align: center;
+    text-shadow: 10px 10px 10px #000;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 10;
+}
+
+.active {
+    width: 40px;
+    background-color: #c00a27;
+    border-radius: 10px;
+}
+
+.dot:hover {
+    background-color: #ebe9e9;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Set de comidas*/
+.foodset {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: 220px;
+    gap: 20px;
+    grid-auto-flow: dense;
+    justify-content: center;
+    padding: 20px 60px 60px;
+    width: 90vw;
+    max-width: 1200px;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+.food_item {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: #03afff;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    border: solid 1px rgb(255, 255, 255);
+    font-family: "Yanone Kaffeesatz", sans-serif, Arial, Helvetica;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fbf8e6;
+    background-position: center;
+    background-size: cover;
+}
+
+.food_item:nth-child(1) {
+    background-image: url("../img/pizza-set-1.jpg");
+}
+.food_item:nth-child(2) {
+    background-image: url("../img/pizza-set-2.png");
+}
+.food_item:nth-child(3) {
+    background-image: url("../img/pizza-set-3.png");
+}
+.food_item:nth-child(4) {
+    background-image: url("../img/pizza-set-4.jpg");
+}
+
+.food_item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.food_item--bigger {
+    grid-column: span 2; /*dos columnas*/
+    grid-row: span 2; /*dos filas*/
+}
+
+.food_item--longer {
+    grid-column: span 2;
+}
+
+.foodset_title {
+    font-size: clamp(0.8em, 7vw, 3em);
+    font-weight: bolder;
+    line-height: 0.8em;
+}
+
+.foodset_desc {
+    font-size: clamp(0.5em, 3vw, 1.5em);
+}
+
+:is(.food_item:nth-child(2), .food_item:nth-child(3)) .foodset_title {
+    font-size: clamp(0.8em, 3vw, 1.4em);
+}
+:is(.food_item:nth-child(2), .food_item:nth-child(3)) .foodset_desc {
+    font-size: clamp(0.5em, 3vw, 0.88em);
+}
+
+.tabpane-product {
+    height: 100%;
+}
+
+.col-full--tabpane {
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.tablist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+    border-bottom: 1px #e0e0e0 solid;
+    text-align: center;
+}
+
+.tabitem {
+    width: 10%;
+    min-width: 100px;
+    /* padding: 15px; */
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #cac7c7;
+}
+
+.tabitem--active {
+    color: #333333;
+}
+
+.tabitem::after {
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 6px;
+    background-color: #c00a27;
+}
+
+.tabitem_link {
+    color: inherit;
+}
+
+.tabcontent {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    margin-bottom: 20px;
+    scroll-margin-top: 100px;
+}
+
+.tabcontent--active {
+    display: flex;
+}
+
+.card {
+    box-sizing: border-box;
+    height: 500px;
+    width: 400px;
+    padding: 10px;
+    background-color: #faf6f2;
+    border: 5px #faf6f2 solid;
+    /* transition: border 0.5s ease-out; */
+}
+
+.card:hover {
+    border: 5px #e0e0e0 solid;
+    z-index: 20;
+    /* transition: border 0s ease-in-out; */
+}
+.card:hover .card__button {
+    visibility: visible;
+}
+
+.card__link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column wrap;
+    height: 30em;
+    width: 100%;
+}
+
+
+.card__text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    color: #333333;
+}
+
+.card__title {
+    display: block;
+    height: 50px;
+}
+
+.card__desc {
+    display: block;
+    height: 40px;
+    font-style: italic;
+    font-size: 0.58em;
+    color: #5e5e5e;
+}
+
+.card__button {
+    visibility: hidden;
+    width: 230px;
+    height: 45px;
+    background-color: #c00a27;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.card_icon {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("/img/ok_icon_17.png") no-repeat;
+    vertical-align: middle;
+}
+
+.card__button-text {
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #faf6f2;
+    text-align: center;
+    padding: 12px 5px;
+    vertical-align: middle;
+}
+
+.card-width {
+    width: clamp(275px, 10vw, 290px);    
+    height: 420px;
+}
+
+.card_img {
+    height: auto;
+    width: 100%;
+}
+.link-modifier {
+    height: 25em;
+}
+
+/*-------------------------------------------------*/
+.pizza_day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 420px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    color: white;
+    background: url("../img/pizza_day_banner.png") no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+    width: 100vw;
+    min-width: 440px;
+    position: relative;
+    margin-left: -50%;
+    margin-bottom: calc(20px + 1vh);
+    left: 50%;
+}
+
+.pizza_day-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+.pizza_text-free {
+    font-size: 1.7em;
+}
+.pizza_text-free::after {
+    content: "";
+    display: block;
+    text-align: center;
+    width: 7em;
+    border-top: 1px solid #fff;
+}
+.pizza_text-day {
+    font-size: 5.5em;
+    font-weight: bold;
+}
+
+.pizza_day_number {
+    display: flex;
+    gap: 30px;
+    justify-content: space-;
+}
+
+.pizza_price {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: right;
+}
+.pizza_price span {
+    display: block;
+    font-size: 0.4em;
+    font-weight: normal;
+}
+
+.pizza_option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3px;
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 1.3em;
+    border-radius: 15px;
+    color: #fbf8e6;
+    background-color: red;
+}
+.pizza_option span::before {
+    content: "-   ";
+}
+
+.btn_order {
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 11px;
+    margin-top: 2em;
+    border-radius: 10px;
+    background-color: #c00a27;
+    color: #e6e6e6;
+}
+
+/*Pié de página*/
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #333333;
+    padding: 1em;
+}
+
+/*social-icons*/
+.social-icons {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 5px;
+    gap: 1em;
+    height: 150px;
+    text-align: center;
+}
+
+.social-item {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #8e8e8e;
+    border-radius: 32px;
+}
+
+.social-icons i {
+    width: 100%;
+    font-size: 1.4em;
+    color: #8e8e8e;
+    padding: 12px 0;
+}
+
+.social-item:hover {
+    border: 1px solid #5e5e5e;
+}
+
+.social-icons i:hover {
+    color: #5e5e5e;
+}
+
+.logo-footer {
+    text-align: center;
+    padding-bottom: 68px;
+}
+
+.copyright {
+    color: #6c6b6b;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.data_item {
+    font-family: "Open Sans", sans-serif;
+    color: #e6e6e6;
+}
+
+.samples-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+    border-bottom: 1px #e0e0e0 solid;
+    text-align: center;
+}
+
+.samples-content {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-sample-title {
+    padding: 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+.product-sample-title:after {
+    content: " ";
+    display: block;
+    height: 3px;
+    /* width: 50px; */
+    margin: 6px 0 auto;
+    background-color: #c00a27;
+}
+
+.speciallity {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    background: linear-gradient(
+        #faf6f2 25%,
+        #ebdfdf 25%,
+        #ebdfdf 90%,
+        #faf6f2 90%
+    );
+    padding: clamp(4em, 6.5vw, 6em) 1em;
+}
+
+.speciallity__text {
+    width: 410px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: nowrap column;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    color: #333333;
+}
+
+.speciallity__title {
+    display: block;
+    margin-bottom: 0.8em;
+}
+
+.speciallity__desc {
+    display: block;
+    font-style: italic;
+    font-size: 0.58em;
+    color: #5e5e5e;
+    margin-bottom: 2em;
+}
+
+.card__button--visible {
+    visibility: visible;
+    width: auto;
+}
+
+.speciallity__link {
+    width: 70%;
+    align-self: center;
+}
+
+.speciallity__img{
+}
+
+.speciallity__img img{
+    width: clamp(15em, 40vw, 40em);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.qualities {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2em;
+    padding: clamp(4em, 6.5vw, 6em) 1em;
+}
+
+.qualities-item {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    width: 8em;
+    color: #333333;
+}
+
+.qualities-item > i{
+    font-size: 3.5em;
+    color: #333333;
+}
+
+.qualities-item > *{
+    margin-bottom: 0.5em;
+}
+.qualities-col{
+    max-width: 1200px;
+}
+
+.card__button-text--speciallity {
+    font-size: 0.7em;
+}
+
+@media screen and (max-width: 1222px) {
+    .food_item--longer {
+        grid-column: 1 / 4;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .foodset {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+        grid-auto-rows: minmax(200px, auto);
+        padding: 20px 15px;
+    }
+    .food_item--longer,
+    .food_item--bigger {
+        grid-column: initial;
+        grid-row: initial;
+    }
+
+    .foodset_title {
+        font-size: 1.6em !important;
+    }
+    .foodset_desc {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .btn_menu {
+        display: inline-block;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        background: #414141;
+        top: -250px; /*Que salga del viewport*/
+        transition: all 0.4s;
+        z-index: 3;
+    }
+
+    .phone_number {
+        font-size: 1em;
+    }
+
+    .navbar {
+        padding: initial;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .login {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        background: #414141;
+        top: -250px; /*Que salga del viewport*/
+        transition: all 0.4s;
+        z-index: 2;
+    }
+    .btn_login {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .phone,
+    .numbertext {
+        display: none;
+    }
+
+    .btn_pizza {
+        display: inline-block;
+    }
+
+    .pizza_list {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        gap: 4px;
+        height: auto;
+        background: #414141;
+        top: -100%; /*Que salga del viewport*/
+        transition: all 0.4s;
+        z-index: 1;
+    }
+    .pizza_day-text {
+        transform: scale(0.8);
+    }
+    .pizza_item {
+        padding: 5px;
+    }
+
+}
